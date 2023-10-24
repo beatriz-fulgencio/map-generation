@@ -5,16 +5,18 @@ using UnityEngine;
 [CreateAssetMenu]
 public class Node : ScriptableObject
 {
-    [SerializeField] public GameObject tilePrefab;
+    [SerializeField] public GameObject tilePrefab;//apagar
 
-    
-    // public Node top = null;
-    // public Node bottom = null;
-    // public Node left = null;
-    // public Node right = null;
+    public Sprite tile;
+
+    public Node top = null;
+    public Node bottom = null;
+    public Node left = null;
+    public Node right = null;
 
     //public Node[] adjecent = new Node[4]; 
-    public List<Node> adjecent = new List<Node>();
+    public List<Node> adjecent = new List<Node>();     //tirar
+
 
     public bool canRecieveTower = false;
     public bool canRecieveDecoration;
@@ -29,6 +31,12 @@ public class Node : ScriptableObject
         this.y = y;
     }
 
+    public Node(int x, int y){
+        this.x = x;
+        this.y = y;
+    }
+
+    public Node(){}
 
 
 }
