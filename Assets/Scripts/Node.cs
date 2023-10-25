@@ -21,6 +21,9 @@ public class Node : ScriptableObject
     public bool canRecieveTower = false;
     public bool canRecieveDecoration;
     public bool isPath = false;
+    public bool Visited = false;
+
+    public bool isEntry = false;
 
     public int x;
     public int y;
